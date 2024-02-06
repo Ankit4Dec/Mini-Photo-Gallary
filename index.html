@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Photo Gallary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallary-container">
+      <div class="gallary-grid">
+        <!-- Thumbnail -->
+        <img
+          src="./Img/I1.jpeg"
+          alt="Description 1"
+          onclick="openLightbox(); setCurrentImage(1)"
+          class="gallary-img"
+        />
+        <img
+          src="./Img/I2.jpeg"
+          alt="Description 2"
+          onclick="openLightbox(); setCurrentImage(2)"
+          class="gallary-img"
+        />
+        <img
+          src="./Img/I3.jpeg"
+          alt="Description 3"
+          onclick="openLightbox(); setCurrentImage(3)"
+          class="gallary-img"
+        />
+      </div>
+    </div>
+
+    <!-- The Model Light Box -->
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-image" />
+      <div id="caption"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
